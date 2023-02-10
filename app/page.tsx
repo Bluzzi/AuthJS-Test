@@ -12,7 +12,6 @@ export default function Home(): ReactElement {
     <main>
       <p className="text-green-600">Signed in as {data.user?.email}</p>
       <button onClick={(): Promise<void> => signOut()}>Sign out</button>
-      <img src="https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png" />
     </main>
   );
 
