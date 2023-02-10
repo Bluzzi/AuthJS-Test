@@ -1,4 +1,7 @@
+"use client";
+
 import { PropsWithChildren, ReactElement } from "react";
+import { SessionProvider } from "next-auth/react";
 import "~/lib/styles/tailwind.css";
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
@@ -6,7 +9,11 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
     <html lang="fr">
       <head />
 
-      <body>{children}</body>
+      <body>
+        <SessionProvider>
+          {children}
+        </SessionProvider>
+      </body>
     </html>
   );
 }
